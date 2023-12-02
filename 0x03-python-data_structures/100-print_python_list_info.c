@@ -11,6 +11,7 @@
  *   This function prints the size of the Python list, the allocated memory,
  *   and the type name of each element in the list.
  */
+
 void print_python_list_info(PyObject *p)
 {
 	int elem;
