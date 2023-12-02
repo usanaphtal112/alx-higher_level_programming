@@ -1,58 +1,72 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * add_nodeint - Adds a new node at the beginning of a linked list.
+ * reverse_listint - reverses a linked list
+ * @head: pointer to the first node in the list
  *
- * @head: A pointer to a pointer to the head of the linked list.
- * @n: The integer value to be stored in the new node.
- *
- * Return: A pointer to the newly created node, or NULL if memory allocation fails.
+ * Return: pointer to the first node in the new list
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+void reverse_listint(listint_t **head)
 {
-	listint_t *new;
+  listint_t *prev = NULL;
+  listint_t *current = *head;
+  listint_t *next = NULL;
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = *head;
-	*head = new;
-	return (new);
+  while (current)
+    {
+      next = current->next;
+      current->next = prev;
+      prev = current;
+      current = next;
+    }
+
+  *head = prev;
 }
 
 /**
- * is_palindrome - Checks if a linked list is a palindrome.
+ * is_palindrome - checks if a linked list is a palindrome
+ * @head: double pointer to the linked list
  *
- * @head: A pointer to a pointer to the head of the linked list.
- *
- * Return: 1 if the linked list is a palindrome, 0 otherwise.
+ * Return: 1 if it is, 0 if not
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *head2 = *head;
-	listint_t *aux = NULL, *aux2 = NULL;
+  listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
 
-	if (*head == NULL || head2->next == NULL)
-		return (1);
-	while (head2 != NULL)
+  if (*head == NULL || (*head)->next == NULL)
+    return (1);
+
+  while (1)
+    {
+      fast = fast->next->next;
+      if (!fast)
 	{
-		add_nodeint(&aux, head2->n);
-		head2 = head2->next;
+	  dup = slow->next;
+	  break;
 	}
-	aux2 = aux;
-	while (*head != NULL)
+      if (!fast->next)
 	{
-		if ((*head)->n != aux2->n)
-		{
-			free_listint(aux);
-			return (0);
-		}
-		*head = (*head)->next;
-		aux2 = aux2->next;
+	  dup = slow->next->next;
+	  break;
 	}
-	free_listint(aux);
-	return (1);
+      slow = slow->next;
+    }
+
+  reverse_listint(&dup);
+
+  while (dup && temp)
+    {
+      if (temp->n == dup->n)
+	{
+	  dup = dup->next;
+	  temp = temp->next;
+	}
+      else
+	return (0);
+    }
+
+  if (!dup)
+    return (1);
+
+  return (0);
 }
