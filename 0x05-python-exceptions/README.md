@@ -32,7 +32,7 @@ You are not allowed to use type()
 
 ## 2. Print and count integers
 
-"""
+```
 Write a function that prints the first x elements of a list and only integers.
 Prototype: def safe_print_list_integers(my_list=[], x=0):
 my_list can contain any type (integer, string, etc.)
@@ -44,11 +44,11 @@ You have to use try: / except:
 You have to use "{:d}".format() to print an integer
 You are not allowed to import any module
 You are not allowed to use len()
-"""
+```
 
 ## 3. Integers division with debug
 
-"""
+```
 Write a function that divides 2 integers and prints the result.
 Prototype: def safe_print_division(a, b):
 You can assume that a and b are integers
@@ -57,11 +57,11 @@ Returns the value of the division, otherwise: None
 You have to use try: / except: / finally:
 You have to use "{}".format() to print the result
 You are not allowed to import any module
-"""
+```
 
 ## 4. Divide a list
 
-"""
+```
 Write a function that divides element by element 2 lists.
 Prototype: def list_division(my_list_1, my_list_2, list_length):
 my_list_1 and my_list_2 can contain any type (integer, string, etc.)
@@ -76,27 +76,28 @@ If my_list_1 or my_list_2 is too short
 print: out of range
 You have to use try: / except: / finally:
 You are not allowed to import any module
-"""
+```
 
 ## 5. Raise exception
 
-"""
+```
 Write a function that raises a type exception.
 Prototype: def raise_exception():
 You are not allowed to import any module
-"""
+```
 
 ## 6. Raise a message
 
-"""
+```
 Write a function that raises a name exception with a message.
 Prototype: def raise_exception_msg(message=""):
 You are not allowed to import any module
-"""
+
+```
 
 ## 7. Safe integer print with error message
 
-"""
+```
 Write a function that prints an integer.
 Prototype: def safe_print_integer_err(value):
 value can be any type (integer, string, etc.)
@@ -106,26 +107,23 @@ Otherwise, returns False and prints in stderr the error precede by Exception:
 You have to use try: / except:
 You have to use "{:d}".format() to print as an integer
 You are not allowed to use type()
-"""
+```
 
 ## 8. Safe function
 
-"""
+```
 Write a function that executes a function safely.
 Prototype: def safe_function(fct, *args):
 You can assume fct will be always a pointer to a function
 Returns the result of the function,
 Otherwise, returns None if something happens during the function and prints in stderr the error precede by Exception:
 You have to use try: / except:
-"""
+```
 
 ## 9. ByteCode -> Python #4
 
-"""
-# Advanced
+```
 Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
-
-  # (Bytecode goes here)
 
 You are not allowed to use the following macros/functions:
 Py_SIZE
@@ -146,11 +144,11 @@ NOTE:
 
 The python script will be launched using the -u option (Force stdout to be unbuffered).
 It is strongly advised to either use setbuf(stdout, NULL); or fflush(stdout) in your C functions IF you choose to use printf. The reason to that is that Python's print and libC's printf don’t share the same buffer, and the output can appear disordered.
-"""
+```
 
 ##  10. CPython #2: PyFloatObject
 
-"""
+```
 Create three C functions that print some basic info about Python lists, Python bytes, and Python float objects.
 Python lists:
 
@@ -193,4 +191,4 @@ NOTE:
 
 The python script will be launched using the -u option (Force stdout to be unbuffered).
 It is strongly advised to either use setbuf(stdout, NULL); or fflush(stdout) in your C functions IF you choose to use printf. The reason to that is that Python's print and libC's printf don’t share the same buffer, and the output can appear disordered.
-"""
+```
