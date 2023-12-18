@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-import sys
-
-def safe_print_integer_err(value):
-    try:
-        print("{:d}".format(value))
-    except (ValueError, TypeError) as err:
-        print("Exception: {}".format(err), file=sys.stderr)
-        return False
-    else:
-        return True
+def safe_print_list_integers(my_list=[], x=0):
+    ret = 0
+    for i in range(0, x):
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            ret += 1
+        except (ValueError, TypeError):
+            continue
+    print("")
+    return (ret)
