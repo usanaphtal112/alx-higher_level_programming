@@ -8,7 +8,7 @@ class Rectangle:
     Represents a rectangle.
 
     Attributes:
-        number_of_instances (int): The number of instances of the Rectangle class.
+        number_of_instances (int): The number of instances
         print_symbol (str): The symbol used for printing the rectangle.
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
@@ -117,7 +117,7 @@ class Rectangle:
 
     def __del__(self):
         """
-        Destructor method to decrement the number of instances and print a message.
+        Destructor method to decrement the number of instances
         """
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
