@@ -1,18 +1,10 @@
 #!/usr/bin/python3
-"""
-This module defines a class called LockedClass with restricted attribute assignment using __slots__.
-
-Attributes:
-    first_name (str): A slot for storing the first name of an instance of LockedClass.
-"""
+"""restricted attribute assignment using __slots__."""
 
 
 class LockedClass:
     """
     A class with restricted attribute assignment using __slots__.
-
-    Attributes:
-        first_name (str): A slot for storing the first name of an instance of LockedClass.
+    first_name (str): A slot for storing the first name.
     """
-
     __slots__ = ["first_name"]
