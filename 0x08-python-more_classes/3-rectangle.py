@@ -1,9 +1,18 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class."""
+"""Rectangle class."""
 
 
 class Rectangle:
-    """Represent a rectangle."""
+    """
+    Represents a rectangle.
+
+    Attributes:
+        number_of_instances (int): The number of instances of the Rectangle class.
+        print_symbol (str): The symbol used for printing the rectangle.
+        width (int): The width of the rectangle.
+        height (int): The height of the rectangle.
+    """
+
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
@@ -17,7 +26,13 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get/set the width of the Rectangle."""
+        """
+        Get or set the width of the rectangle.
+
+        Raises:
+            TypeError: If the width is not an integer.
+            ValueError: If the width is less than 0.
+        """
         return self.__width
 
     @width.setter
@@ -30,7 +45,13 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the height of the Rectangle."""
+        """
+        Get or set the height of the rectangle.
+
+        Raises:
+            TypeError: If the height is not an integer.
+            ValueError: If the height is less than 0.
+        """
         return self.__height
 
     @height.setter
@@ -42,19 +63,31 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return the area of the Rectangle."""
+        """
+        Calculate the area of the rectangle.
+
+        Returns:
+            int: The area of the rectangle.
+        """
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """Return the perimeter of the Rectangle."""
+        """
+        Calculate the perimeter of the rectangle.
+
+        Returns:
+            int: The perimeter of the rectangle.
+        """
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return the printable representation of the Rectangle.
+        """
+        Return a string representation of the rectangle for printing.
 
-        Represents the rectangle with the # character.
+        Returns:
+            str: A string representation of the rectangle.
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
