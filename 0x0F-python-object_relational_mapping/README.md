@@ -1,6 +1,8 @@
 # 0x0F. Python - Object-relational mapping
 
-### Python OOP SQL MySQL ORM SQLAlchemy
+```
+Python OOP SQL MySQL ORM SQLAlchemy
+```
 
 #### Install and activate venv
 To create a Python Virtual Environment, allowing you to install specific dependencies for this python project, we will install venv:
@@ -13,7 +15,9 @@ $ source venv/bin/activate
 
 
 #### Install MySQLdb module version 2.0.x
+```
 Install SQLAlchemy module version 1.4.x
+```
 
 ### Tasks
 
