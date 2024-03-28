@@ -4,7 +4,7 @@ This script retrieves the user ID from the GitHub
 API using HTTP basic authentication.
 
 Usage:
-    python script_name.py <username> <password>
+    python 10-my_github.py <username> <password>
 
 Arguments:
     username (str): The GitHub username.

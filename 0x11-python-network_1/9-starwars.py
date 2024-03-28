@@ -1,9 +1,19 @@
 #!/usr/bin/python3
-"""Sends a search request for a given string to the Star Wars API.
-
-Usage: ./9-starwars.py <search string>
-  - The search request is sent to the Star Wars API search people endpoint.
 """
+This script searches for Star Wars characters using the Star Wars
+API (SWAPI) based on the provided search query.
+
+Usage:
+    python 9-starwars.py <search_query>
+
+Arguments:
+    search_query (str): The name of the Star Wars character to search for.
+
+Output:
+    Prints the number of results found and the names of
+    the characters matching the search query.
+"""
+
 import sys
 import requests
 

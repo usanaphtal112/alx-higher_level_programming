@@ -3,7 +3,7 @@
 This script retrieves tweets matching a specified query using the Twitter API.
 
 Usage:
-    python script_name.py <consumer_key> <consumer_secret> <query>
+    python 103-search_twitter.py <consumer_key> <consumer_secret> <query>
 
 Arguments:
     consumer_key (str): The consumer key for the Twitter API.

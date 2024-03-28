@@ -1,9 +1,18 @@
 #!/usr/bin/python3
-"""Sends a POST request to a given URL with a given email.
-
-Usage: ./2-post_email.py <URL> <email>
-  - Displays the body of the response.
 """
+This script sends a POST request to a specified URL with email data.
+
+Usage:
+    python 2-post_email.py <url> <email>
+
+Arguments:
+    url (str): The URL to which the POST request is sent.
+    email (str): The email data to be sent.
+
+Output:
+    Prints the response content received from the server after sending the POST request.
+"""
+
 import sys
 import urllib.parse
 import urllib.request

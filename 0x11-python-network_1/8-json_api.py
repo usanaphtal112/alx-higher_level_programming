@@ -1,13 +1,24 @@
 #!/usr/bin/python3
-"""Sends a POST request to http://0.0.0.0:5000/search_user with a given letter.
-
-Usage: ./8-json_api.py <letter>
-  - The letter is sent as the value of the variable `q`.
-  - If no letter is provided, sends `q=""`.
 """
+This script sends a POST request to a specified URL with a search query
+parameter using the requests library.
+
+Usage:
+    python 8-json_api.py [letter]
+
+Arguments:
+    letter (str, optional): A single letter to search for.
+    If not provided, an empty string is used.
+
+Output:
+    Prints the result of the search operation, including the
+    user ID and name if a match is found.
+    If no result is found, it prints "No result".
+    If the response is not a valid JSON, it prints "Not a valid JSON".
+"""
+
 import sys
 import requests
-
 
 if __name__ == "__main__":
     letter = "" if len(sys.argv) == 1 else sys.argv[1]
